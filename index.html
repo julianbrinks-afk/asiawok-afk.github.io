@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asia Wok Kiel | Authentische Thailändische Küche</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-text">Asia<span class="accent">Wok</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Startseite</a></li>
+                <li><a href="#about">Über Uns</a></li>
+                <li><a href="#menu">Speisekarte</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#menu" class="btn btn-primary">Jetzt Bestellen</a>
+                <button class="mobile-toggle"><i class="ri-menu-line"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="assets/hero_background.png" alt="Wok Cooking Cinematic" class="hero-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <span class="badge">Neu in Kiel</span>
+            <h1 class="hero-title">Authentische <br><span class="gradient-text">Asia Küche.</span></h1>
+            <p class="hero-subtitle">Erlebe den wahren Geschmack Thailands und Chinas mitten in Kiel. Ohne künstliche Geschmacksverstärker, immer frisch zubereitet.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary btn-large">Menü Entdecken <i class="ri-arrow-right-line"></i></a>
+                <a href="#contact" class="btn btn-secondary btn-large">Tisch Reservieren</a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">100%</span>
+                    <span class="stat-label">Frische Zutaten</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number">0%</span>
+                    <span class="stat-label">Glutamat*</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <div class="rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <span class="stat-label">Lieferando Top-Bewertet</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container section-grid">
+            <div class="about-text">
+                <span class="section-badge">Unsere Philosophie</span>
+                <h2 class="section-title">Geschmack, der <span class="accent">verbindet</span>.</h2>
+                <p class="section-desc">Willkommen im Asia Wok Kiel. Wir bieten Ihnen ein authentisches, asiatisches Ess-Erlebnis in einer modernen und gemütlichen Atmosphäre.</p>
+                <p class="section-desc">Unsere Leidenschaft ist es, traditionelle Rezepte mit modernen Einflüssen zu kombinieren. Dabei legen wir höchsten Wert auf Qualität: Unsere Gerichte werden mit Liebe, besten Zutaten und ganz ohne zusätzliche Geschmacksverstärker zubereitet. Wegen Corona bieten wir aktuell nur unseren schnellen Außerhaus- und Lieferservice an.</p>
+                <ul class="feature-list">
+                    <li><i class="ri-checkbox-circle-fill"></i> Thailändische & Chinesische Spezialitäten</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Schneller & heißer Lieferservice in Kiel</li>
+                    <li><i class="ri-checkbox-circle-fill"></i> Vegan & Vegetarische Optionen</li>
+                </ul>
+            </div>
+            <div class="about-image-collage">
+                <div class="glass-card main-card">
+                    <div class="card-icon"><i class="ri-restaurant-line"></i></div>
+                    <h3>Höchste Qualität</h3>
+                    <p>Frisches Gemüse, hochwertiges Fleisch und originale Gewürze für den besten Geschmack.</p>
+                </div>
+                <div class="glass-card secondary-card">
+                    <div class="card-icon"><i class="ri-e-bike-2-fill"></i></div>
+                    <h3>Schnell Geliefert</h3>
+                    <p>Heiß und lecker direkt vor deine Haustür.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Highlights -->
+    <section class="menu" id="menu">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-badge">Beliebteste Gerichte</span>
+                <h2 class="section-title">Highlights unserer <span class="gradient-text">Küche</span></h2>
+                <p class="section-desc">Entdecke die Favoriten unserer Gäste. Alle Gerichte werden frisch mit Reis als Beilage serviert.</p>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Menu Item 1 -->
+                <div class="menu-card glass-panel">
+                    <div class="menu-image-container">
+                        <img src="assets/menu_pad_thai.png" alt="Pad Thai" class="menu-image">
+                        <div class="price-tag">11,50 €</div>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <span class="dish-num">T13</span>
+                            <h3 class="dish-title">Pad Thai</h3>
+                        </div>
+                        <p class="dish-desc">Bratnudeln thailändischer Art mit Schweinefleisch, Ei, Erdnüssen und frischem Limettensaft.</p>
+                        <div class="dish-tags">
+                            <span class="tag">Beliebt</span>
+                            <span class="tag tag-outline">Leicht Scharf</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 2 -->
+                <div class="menu-card glass-panel">
+                    <div class="menu-image-container">
+                        <img src="assets/menu_curry.png" alt="Panang Curry" class="menu-image">
+                        <div class="price-tag">11,00 €</div>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <span class="dish-num">T4</span>
+                            <h3 class="dish-title">Panang Gai</h3>
+                        </div>
+                        <p class="dish-desc">Zartes Hühnerfleisch in einem cremigen, gelb-braunen Panang-Curry, verfeinert mit Kokosmilch.</p>
+                        <div class="dish-tags">
+                            <span class="tag">Klassiker</span>
+                            <span class="tag tag-outline">Scharf</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 3 -->
+                <div class="menu-card glass-panel">
+                    <div class="menu-image-container">
+                        <img src="assets/menu_duck.png" alt="Gebratene Ente" class="menu-image">
+                        <div class="price-tag">13,50 €</div>
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <span class="dish-num">T7</span>
+                            <h3 class="dish-title">Ped Rad Prik</h3>
+                        </div>
+                        <p class="dish-desc">Knusprig gebackene Ente auf thailändischem Reis, übergossen mit einer pikanten Thai-Soße.</p>
+                        <div class="dish-tags">
+                            <span class="tag">Spezialität</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-action center">
+                <a href="#" class="btn btn-secondary btn-large">Gesamte Speisekarte ansehen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info & Contact Section -->
+    <section class="info" id="contact">
+        <div class="container container-sm">
+            <div class="info-card glass-panel-heavy">
+                <h2 class="section-title text-center">Wir sind für Sie da.</h2>
+                
+                <div class="info-grid">
+                    <div class="info-block">
+                        <div class="icon-circle"><i class="ri-phone-fill"></i></div>
+                        <h3>Bestell-Hotline</h3>
+                        <p class="highlight-text">0431 - 990 75 54</p>
+                        <p class="sub-text">Rufen Sie uns an für Abholung oder Lieferung.</p>
+                    </div>
+                    
+                    <div class="info-block">
+                        <div class="icon-circle"><i class="ri-time-fill"></i></div>
+                        <h3>Öffnungszeiten</h3>
+                        <p><strong>Mo. - Fr.:</strong> 11:00 - 22:00 Uhr</p>
+                        <p><strong>Sa., So. & Feiertage:</strong> 12:00 - 22:00 Uhr</p>
+                    </div>
+
+                    <div class="info-block full-width">
+                        <div class="icon-circle"><i class="ri-map-pin-fill"></i></div>
+                        <h3>Lieferzeiten</h3>
+                        <p>Lieferung ab 11:30 Uhr (Mo-Fr) bzw. 12:00 Uhr (Wochenende). Lieferung im Umkreis Kiel, kontaktieren Sie uns für Details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <div class="footer-logo">
+                    <span class="logo-text">Asia<span class="accent">Wok</span> Kiel</span>
+                </div>
+                <p class="copyright">© 2026 Asia Wok Kiel. Alle Rechte vorbehalten.</p>
+                <div class="footer-links">
+                    <a href="#">Impressum</a>
+                    <a href="#">Datenschutz</a>
+                    <a href="#">AGB</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Navbar Scrolled State
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
