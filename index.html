@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Asia Wok Kiel | Authentische Thailändische Küche</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
             <a href="#home" class="logo">
                 <span class="logo-text">Asia<span class="accent">Wok</span></span>
             </a>
-            <ul class="nav-links" id="nav-links">
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="#home">Startseite</a></li>
                 <li><a href="#about">Über Uns</a></li>
                 <li><a href="#menu">Speisekarte</a></li>
@@ -25,7 +25,7 @@
             </ul>
             <div class="nav-actions">
                 <a href="#menu" class="btn btn-primary">Jetzt Bestellen</a>
-                <button class="mobile-toggle" id="mobile-toggle"><i class="ri-menu-line"></i></button>
+                <button class="mobile-toggle" id="mobile-btn"><i class="ri-menu-line"></i></button>
             </div>
         </div>
     </nav>
@@ -159,8 +159,7 @@
                     </div>
                 </div>
             </div>
-
-            </div>
+        </div>
     </section>
 
     <section class="info" id="contact">
@@ -220,18 +219,22 @@
             }
         });
 
-        // FIX: Mobile Menu Toggle Funktionalität hinzugefügt
-        const mobileToggle = document.getElementById('mobile-toggle');
-        const navLinks = document.getElementById('nav-links');
+        // Mobile Menu Functionality
+        const mobileBtn = document.getElementById('mobile-btn');
+        const navMenu = document.getElementById('nav-menu');
 
-        mobileToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+        mobileBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            mobileBtn.querySelector('i').classList.toggle('ri-menu-line');
+            mobileBtn.querySelector('i').classList.toggle('ri-close-line');
         });
 
-        // Schließen des Menüs beim Klicken auf einen Link
+        // Close menu on link click
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
+                navMenu.classList.remove('show');
+                mobileBtn.querySelector('i').classList.add('ri-menu-line');
+                mobileBtn.querySelector('i').classList.remove('ri-close-line');
             });
         });
     </script>
