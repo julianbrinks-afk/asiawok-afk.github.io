@@ -4,24 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asia Wok Kiel | Authentische Thailändische Küche</title>
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;700;800&display=swap" rel="stylesheet">
-    <!-- CSS -->
     <link rel="stylesheet" href="styles.css">
-    <!-- Icons -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
     
-    <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">
+            <a href="#home" class="logo">
                 <span class="logo-text">Asia<span class="accent">Wok</span></span>
             </a>
-            <ul class="nav-links">
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#home">Startseite</a></li>
                 <li><a href="#about">Über Uns</a></li>
                 <li><a href="#menu">Speisekarte</a></li>
@@ -29,12 +25,11 @@
             </ul>
             <div class="nav-actions">
                 <a href="#menu" class="btn btn-primary">Jetzt Bestellen</a>
-                <button class="mobile-toggle"><i class="ri-menu-line"></i></button>
+                <button class="mobile-toggle" id="mobile-toggle"><i class="ri-menu-line"></i></button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-bg">
             <img src="assets/hero_background.png" alt="Wok Cooking Cinematic" class="hero-image">
@@ -74,7 +69,6 @@
         </div>
     </section>
 
-    <!-- About Section -->
     <section class="about" id="about">
         <div class="container section-grid">
             <div class="about-text">
@@ -103,7 +97,6 @@
         </div>
     </section>
 
-    <!-- Menu Highlights -->
     <section class="menu" id="menu">
         <div class="container">
             <div class="section-header center">
@@ -113,7 +106,6 @@
             </div>
 
             <div class="menu-grid">
-                <!-- Menu Item 1 -->
                 <div class="menu-card glass-panel">
                     <div class="menu-image-container">
                         <img src="assets/menu_pad_thai.png" alt="Pad Thai" class="menu-image">
@@ -132,7 +124,6 @@
                     </div>
                 </div>
 
-                <!-- Menu Item 2 -->
                 <div class="menu-card glass-panel">
                     <div class="menu-image-container">
                         <img src="assets/menu_curry.png" alt="Panang Curry" class="menu-image">
@@ -151,7 +142,6 @@
                     </div>
                 </div>
 
-                <!-- Menu Item 3 -->
                 <div class="menu-card glass-panel">
                     <div class="menu-image-container">
                         <img src="assets/menu_duck.png" alt="Gebratene Ente" class="menu-image">
@@ -170,13 +160,9 @@
                 </div>
             </div>
 
-            <div class="menu-action center">
-                <a href="#" class="btn btn-secondary btn-large">Gesamte Speisekarte ansehen</a>
             </div>
-        </div>
     </section>
 
-    <!-- Info & Contact Section -->
     <section class="info" id="contact">
         <div class="container container-sm">
             <div class="info-card glass-panel-heavy">
@@ -207,7 +193,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-bottom">
@@ -224,7 +209,6 @@
         </div>
     </footer>
 
-    <!-- Interactive Scripts -->
     <script>
         // Navbar Scrolled State
         const navbar = document.getElementById('navbar');
@@ -234,6 +218,21 @@
             } else {
                 navbar.classList.remove('scrolled');
             }
+        });
+
+        // FIX: Mobile Menu Toggle Funktionalität hinzugefügt
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Schließen des Menüs beim Klicken auf einen Link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
         });
     </script>
 </body>
