@@ -7,7 +7,7 @@
     --surface-dark: #11151F;
     --surface-light: #1A2130;
     
-    --accent-primary: #FF4D00; /* Vibrant Orange for Asian Cuisine */
+    --accent-primary: #FF4D00;
     --accent-secondary: #FFB000;
     --accent-glow: rgba(255, 77, 0, 0.4);
     
@@ -42,6 +42,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -49,8 +50,16 @@ body {
     background-color: var(--bg-dark);
     color: var(--text-primary);
     line-height: 1.6;
-    overflow-x: hidden;
+    overflow-x: hidden; /* FIX: Verhindert Scrollen nach rechts auf mobilen Geräten */
     -webkit-font-smoothing: antialiased;
+}
+
+/* FIX: Verhindert, dass dekorative Glow-Elemente das Layout verbreitern */
+section {
+    padding: 100px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden; 
 }
 
 a {
@@ -100,12 +109,6 @@ h1, h2, h3, h4, .logo-text {
 
 .container-sm {
     max-width: 900px;
-}
-
-section {
-    padding: 100px 0;
-    position: relative;
-    z-index: 1;
 }
 
 /* Buttons */
@@ -208,8 +211,9 @@ section {
     background: none;
     border: none;
     color: var(--text-primary);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
+    z-index: 101;
 }
 
 /* =========================================
@@ -222,7 +226,6 @@ section {
     position: relative;
     padding-top: 120px;
     padding-bottom: 80px;
-    overflow: hidden;
 }
 
 .hero-bg {
@@ -236,7 +239,6 @@ section {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transform: scale(1.05); /* Slight scale to allow for parallax if needed */
 }
 
 .hero-overlay {
@@ -439,7 +441,7 @@ section {
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px;
     margin-bottom: 50px;
 }
@@ -656,6 +658,7 @@ section {
     .about-image-collage {
         order: -1;
         margin-bottom: 40px;
+        height: 350px;
     }
     .hero-title {
         font-size: 3.5rem;
@@ -663,12 +666,34 @@ section {
 }
 
 @media (max-width: 768px) {
-    .nav-links, .nav-actions .btn {
+    /* FIX: Styles für das mobile Menü */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: var(--surface-dark);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: var(--transition);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+        z-index: 100;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-actions .btn {
         display: none;
     }
+
     .mobile-toggle {
         display: block;
     }
+
     .hero-content {
         padding-top: 60px;
     }
